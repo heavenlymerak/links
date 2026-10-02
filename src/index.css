@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+* {
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+@theme {
+  --color-gold-light: #fde68a;
+  --color-gold: #d97706;
+  --color-gold-hover: #b45309;
+  --color-gold-accent: #f59e0b;
+  --color-gold-glow: rgba(217, 119, 6, 0.25);
+  --color-gold-glow-soft: rgba(217, 119, 6, 0.08);
+  --color-gold-hover-glow: rgba(245, 158, 11, 0.25);
+  --color-gold-orbit-glow: rgba(245, 158, 11, 0.9);
+  --color-gold-line-glow: rgba(245, 158, 11, 0.8);
+  --color-gold-grid: rgba(245, 158, 11, 0.4);
+  --color-gold-trail: rgba(217, 119, 6, 0.25);
+  --color-gold-muted: #937000;
+  --color-star-white: #fff7d6;
+
+  --color-cosmic-bg: #050117;
+  --color-nebula: #0c0330;
+  --color-avatar-bg: #0a0e17;
+  --color-bio-gold: #b88700;
+  --color-track-gold: #ffbb33;
+  --color-track-purple: #8f5ff5;
+  --color-track-artist: #cc9918;
+
+  --color-grid-white: rgba(255, 255, 255, 0.05);
+  --color-dark-bg: #0d0b02;
+  --color-dark-card: #0f172a;
+  --color-dark-border: #1e293b;
+}
+
+@keyframes spin-orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-orbit {
+  animation: spin-orbit 12s linear infinite;
+}
+
+@keyframes bio-celestial {
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateY(4px) skewX(-8deg);
+    text-shadow: 0 0 12px rgba(245, 158, 11, 0.8);
+  }
+  45% {
+    opacity: 0.8;
+    filter: blur(0);
+    transform: translateY(-1px) skewX(2deg);
+    text-shadow: 2px 0 rgba(245, 158, 11, 0.45), -2px 0 rgba(125, 80, 255, 0.35);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0) skewX(0);
+    text-shadow: 0 0 8px rgba(245, 158, 11, 0.35);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+    text-shadow: none;
+  }
+}
+
+.bio-celestial {
+  animation: bio-celestial 650ms ease-out both;
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .shooting-cursor-enabled,
+  .shooting-cursor-enabled * {
+    cursor: none !important;
+  }
+
+  .shooting-cursor {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate3d(
+        calc(var(--cursor-x, 0px) - 48px),
+        calc(var(--cursor-y, 0px) - 6px),
+        0
+      )
+      rotate(var(--cursor-angle, 0deg));
+    transform-origin: right center;
+    transition: opacity 120ms ease;
+    will-change: transform;
+  }
+
+  .shooting-cursor.is-visible {
+    opacity: 1;
+  }
+
+  .shooting-cursor::before {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    left: 0;
+    height: 2px;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, transparent, var(--color-gold-trail) 35%, var(--color-gold-muted) 82%, var(--color-star-white));
+    filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.8));
+    content: "";
+  }
+
+  .shooting-cursor::after {
+    position: absolute;
+    top: 3px;
+    right: 2px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-star-white);
+    box-shadow: 0 0 5px 2px rgba(245, 158, 11, 0.95);
+    content: "";
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bio-celestial {
+    animation: none;
+  }
+}
+
+@keyframes shooting {
+  0% {
+    transform: translateX(0) translateY(0) rotate(135deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(-400px) translateY(400px) rotate(135deg);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
