@@ -14,7 +14,7 @@ export const playlist = [
   { title: 'Liar Angin', artist: 'Feby Putri', id: '2mGGmw0htjUmy2Saf2i6RZ' },
   { title: 'Oceans & Engines', artist: 'NIKI', id: '6H6ldB48HrWYQlMuVJbGHk' },
   { title: 'Flowers', artist: 'Miley Cyrus', id: '7DSAEUvxU8FajXtRloy8M0' },
-  { title: 'In the Name of Love', artist: 'Martin Garrix, Bebe Rexha', id: '23L5CiUhw2jV1OIMwthR3S' },
+  { title: 'Hurts So Good', artist: 'Astrid S', id: '46u5B2WN4wryYLZuMAOmI4' },
 ];
 
 export const profileData = {
