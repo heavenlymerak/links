@@ -3,6 +3,7 @@ import {
   FaInstagram, 
   FaYoutube, 
   FaDiscord, 
+  FaTiktok, 
   FaCompass, 
   FaBookOpen, 
   FaHome,
@@ -10,11 +11,11 @@ import {
 } from 'react-icons/fa';
 
 export const playlist = [
-  { title: 'Halu', artist: 'Feby Putri', id: '2dTIJVE0stqTvrhbpf7fFw' },
+  { title: 'don\'t wanna break up again', artist: 'Ariana Grande', id: '0o3ua5ufFK7nfRzbDUNoGA' },
   { title: 'Liar Angin', artist: 'Feby Putri', id: '2mGGmw0htjUmy2Saf2i6RZ' },
   { title: 'Oceans & Engines', artist: 'NIKI', id: '6H6ldB48HrWYQlMuVJbGHk' },
-  { title: 'Flowers', artist: 'Miley Cyrus', id: '7DSAEUvxU8FajXtRloy8M0' },
-  { title: 'Hurts So Good', artist: 'Astrid S', id: '46u5B2WN4wryYLZuMAOmI4' },
+  { title: 'twilight zone', artist: 'Ariana Grande', id: '1UrwJzlNC2oaTlxj1OZmcu' },
+  { title: 'dandelion', artist: 'Ariana Grande', id: '6wZOZ0votPhc8qdg4UFPtH' },
 ];
 
 export const profileData = {
@@ -39,8 +40,8 @@ export const profileData = {
     },
     {
       id: 1,
-      title: "merak's Garden",
-      url: "https://discord.gg/9YcN3bH9Tz",
+      title: "SOURCORD",
+      url: "https://discord.gg/yMyTFfcaMw",
       icon: FaDiscord,
     },
     {
@@ -52,7 +53,7 @@ export const profileData = {
     {
       id: 3,
       title: "Instagram",
-      url: "https://instagram.com/heavenlymerak",
+      url: "https://instagram.com/meewrak",
       icon: FaInstagram,
     },
     {
@@ -63,9 +64,9 @@ export const profileData = {
     },
     {
       id: 5,
-      title: "X",
+      title: "Tiktok",
       url: "https://x.com/heavenlymerak",
-      icon: FaTwitter,
+      icon: FaTiktok,
     },
     {
       id: 6,
@@ -75,6 +76,24 @@ export const profileData = {
     },
     {
       id: 7,
+      title: "Geoguessr (2nd acc)",
+      url: "https://www.geoguessr.com/user/69ba9e7efe6bd8b233403281",
+      icon: FaCompass,
+    },
+    {
+      id: 8,
+      title: "Geoguessr (3rd acc)",
+      url: "https://www.geoguessr.com/user/69fa0659287476bd84c3a0a0",
+      icon: FaCompass,
+    },
+    {
+      id: 9,
+      title: "Geoguessr (4th acc)",
+      url: "https://www.geoguessr.com/user/6af588f9ea57b78ab6f99e39",
+      icon: FaCompass,
+    },
+    {
+      id: 10,
       title: "Main Page",
       url: "https://heavenlymerak.github.io/",
       icon: FaHome,
