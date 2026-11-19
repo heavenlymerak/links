@@ -65,7 +65,7 @@ export const profileData = {
     {
       id: 5,
       title: "Tiktok",
-      url: "https://x.com/heavenlymerak",
+      url: "https://tiktok.com/@heavenlymerak",
       icon: FaTiktok,
     },
     {
