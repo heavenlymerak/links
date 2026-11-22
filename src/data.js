@@ -41,7 +41,7 @@ export const profileData = {
     {
       id: 1,
       title: "SOURCORD",
-      url: "https://discord.gg/yMyTFfcaMw",
+      url: "https://discord.gg/yKqp35QrPq",
       icon: FaDiscord,
     },
     {
