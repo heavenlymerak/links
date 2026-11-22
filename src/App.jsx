@@ -230,9 +230,6 @@ function App() {
             <p className="text-[10px] tracking-[0.25em] text-track-gold font-mono uppercase">
               What I Vibin' RN
             </p>
-            <p className="mt-1 text-xs text-slate-300 font-sans">
-              {currentTrack.title} <span className="text-track-purple">·<span className="text-track-artist"> {currentTrack.artist}</span></span>
-            </p>
           </div>
           <div className="flex shrink-0 items-center gap-2">
             <button
